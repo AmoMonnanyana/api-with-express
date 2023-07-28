@@ -3,13 +3,8 @@ document.addEventListener('alpine:init', () => {
       return {
         username: '',
         language: '',
-        greetings: 'waiting for inputs',
+        greetings: '...waiting for inputs',
         used: '',
-        greetWords : {
-          setswana: "Dumela",
-          venda: "Ndaa",
-
-        },
 
         greet(){
         axios.get(`/api/greet?username=${this.username}&language=${this.language}`)
