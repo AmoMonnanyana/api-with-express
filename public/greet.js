@@ -5,6 +5,12 @@ document.addEventListener('alpine:init', () => {
         language: '',
         greetings: 'waiting for inputs',
         used: '',
+        greetWords : {
+          setswana: "Dumela",
+          venda: "Ndaa",
+
+        },
+
         greet(){
         axios.get(`/api/greet?username=${this.username}&language=${this.language}`)
         .then(result =>{

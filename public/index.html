@@ -10,22 +10,17 @@
 </head>
 <body x-data="greetApi">
     <script src="./greet.js"></script>
-    <h1>Hello.....Shi shi shi</h1>
+    <h1>greeting widget</h1>
 
-<script>
-    axios.get('/api/greet?username=Amogelang&language=english')
-    .then(result =>{
-        alert(result.data.message)
-        
-    })
-</script>
-
-<input type="text" x-model="username" placeholder="username">
-<input type="text" x-model="language" placeholder="language">
-<div x-text="greetings"></div>
-<div x-text="used"></div>
-<button x-on:click="greet">greet</button>
-</div>
-
+            <label for="username">Username</label>
+            <input type="text", x-model="username" id="username"><br>
+            <input type="radio" x-model="language" value="english" id="english"> 
+            <label for="english">English </label>
+            <input type="radio" x-model="language" value="xhosa" id="xhosa">
+            <label for="xhosa">Xhosa</label>
+            <input type="radio" x-model="language" value="zulu" id="zulu">
+            <label for="zulu"> Zulu </label><br>  
+<button x-on:click="greet">Greet</button>
+<div x-text="'Message: ' + greetings"></div>
 </body>
 </html>
