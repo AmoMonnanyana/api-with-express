@@ -18,7 +18,6 @@ const greetings = {
     english: 'Hello',
     zulu: 'Sawubona',
     xhosa: 'Molo',
-    setswana: 'Dumela'
 }
 
 app.get('/api/greet/', function(req, res){

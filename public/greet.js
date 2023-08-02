@@ -16,3 +16,10 @@ document.addEventListener('alpine:init', () => {
       }
     })
 })
+document.addEventListener('alpine:init', () => {
+  Alpine.data('greetApi', function() {
+    return {
+      
+    }
+  })
+})
